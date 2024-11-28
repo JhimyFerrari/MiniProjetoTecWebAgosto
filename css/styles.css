@@ -98,32 +98,56 @@ main{
 
 .form-entrar {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    gap: 10px;
     width: 60%;
+    min-width: 400px;
+    max-width: 800px;
     background-color: var(--text-color-white);
+    border-radius: 12px;
+    padding: 20px;
     
 }
+.form-entrar span{
+    align-self: center;
+}
 .form-entrar div{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+   display: grid;
+   grid-template-columns: 1fr 2fr
 }
 .form-entrar div label{
     font-size: 20px ;
+}
+.error-message{
+    font-size: 14px;
+    color: red;
+}
+
+
+.button-submit {
+ font-size: 16px;
+ border: 0;
+ background-color: #f0f0f000;  
+
+}
+.button-submit:hover {
+    color: gray;
 }
 input {
     background: var(--text-color-white);
     border: 1px solid gray;
     border-radius: 10px;
     height: 2rem;
+    width: 80%;
     padding: 0px 4px 0px 4px;
-}
-.input-bg{
-    width: 150px;
+    margin-right: 10px;
+    text-align: left;
 }
 
+
 footer {
-    position: sticky;
+    position: fixed;
     bottom: 0;
     display: flex;
     flex-direction: column;
@@ -140,6 +164,7 @@ footer a{
     color: rgb(183, 194, 220);
 }
 
+
 @media (max-width:980px) {
     .navbar-ul{
         display: none;
@@ -148,6 +173,9 @@ footer a{
         display: block;
     }
     .container-sobrenos{
+        grid-template-columns: 1fr;
+    }
+    .form-entrar div{ 
         grid-template-columns: 1fr;
     }
 }
